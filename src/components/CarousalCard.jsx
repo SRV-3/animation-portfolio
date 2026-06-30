@@ -88,9 +88,7 @@ const CarousalCard = ({ project, onStart, onEnd }) => {
           splitBy="words"
           duration=".25"
         >
-          <h3 className="text-[1.2rem] text-[#010101] font-medium">
-            {project.title}
-          </h3>
+          <h3 className="text-[1.2rem] text-[#010101] ">{project.title}</h3>
         </TextReveal>
       </div>
       <div className="imgDiv absolute h-full w-full overflow-hidden">
