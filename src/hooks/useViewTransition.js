@@ -39,7 +39,6 @@ const removeOverlay = () => {
 };
 
 const useViewTransition = () => {
-  removeOverlay();
   const router = useRouter();
 
   const navigateTo = useCallback(
@@ -56,7 +55,8 @@ const useViewTransition = () => {
           from: "start",
         },
         onComplete: () => {
-          (console.log("start"), router.push(href));
+          console.log("object");
+          router.push(href);
           gsap.to(strips, {
             scaleY: 0,
             duration: 0.59,

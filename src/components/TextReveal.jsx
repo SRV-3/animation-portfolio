@@ -6,8 +6,10 @@ const TextReveal = forwardRef(
   (
     {
       children,
+
       className = "",
       trigger = "mount",
+      from = "start",
       scrollStart = "top 75%",
       splitBy = "lines",
       duration = 0.67,
@@ -59,7 +61,7 @@ const TextReveal = forwardRef(
         ease,
         stagger: {
           each: stagger,
-          from: "start",
+          from: from,
         },
       });
 
@@ -77,6 +79,7 @@ const TextReveal = forwardRef(
           },
         });
       }
+      if (trigger === "manual") return;
     });
 
     return (
